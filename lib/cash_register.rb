@@ -35,7 +35,7 @@ class CashRegister
     @items.pop
     @total = @total - @last_amt
     if @items = []
-      return 0.0 
+      @total = 0.0 
     end
   end
 end
