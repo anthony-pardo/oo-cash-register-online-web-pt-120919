@@ -15,7 +15,7 @@ class CashRegister
       i += 1
     end
     @last_transaction = title
-    @last_amt = price
+    @last_amt = price*quantity
   end
   
   def apply_discount 
@@ -32,10 +32,6 @@ class CashRegister
   end
   
   def void_last_transaction
-    @items.pop()
     @total = @total - @last_amt
-    if @items == []
-      @total = 0.0 
-    end
   end
 end
